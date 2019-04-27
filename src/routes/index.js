@@ -4,9 +4,10 @@ import { Homepage } from '../pages';
 
 const Router = () => {
   return (
-  <Switch>
-    <Route path="/" component={Homepage} />
-  </Switch>);
+    <Switch>
+      <Route path="/" component={Homepage} />
+    </Switch>
+  );
 };
 
 export default Router;
