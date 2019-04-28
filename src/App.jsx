@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import Router from './routes';

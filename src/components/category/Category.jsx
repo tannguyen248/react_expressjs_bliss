@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import axios from 'axios';
 import Carousel from './Carousel';
 import Information from './Information';
+import CategoryGridList from './CategoryGridList';
+import FloatCategory from './FloatCategory';
 import CategoryDrawer from './CategoryDrawer';
 import categories from '../../data/categories.json';
 
@@ -13,7 +15,8 @@ const styles = theme => ({
     margin: 10,
     [theme.breakpoints.down('md')]: {
       marginLeft: 'auto',
-      marginRight: 'auto'
+      marginRight: 'auto',
+      marginTop: 0
     }
   },
   category: {
@@ -23,7 +26,11 @@ const styles = theme => ({
     marginLeft: 15,
     [theme.breakpoints.down('md')]: {
       marginLeft: 'auto',
-      marginRight: 'auto'
+      marginRight: 'auto',
+      height: 'unset',
+      '& > *:first-child': {
+        marginTop: 0
+      }
     },
     '& > *': {
       marginTop: 25
@@ -34,7 +41,8 @@ const styles = theme => ({
 class Category extends React.Component {
   state = {
     breeds: null,
-    currentCategoryId: 'abys'
+    currentCategoryId: 'abys',
+    isDrawerOpened: false
   };
 
   getCategories = (startIndex, endIndex) => {
@@ -64,6 +72,12 @@ class Category extends React.Component {
     this.setState({
       currentCategoryId: id
     });
+  };
+
+  handleToggleDrawer = () => {
+    this.setState((state, props) => ({
+      isDrawerOpened: !state.isDrawerOpened
+    }));
   };
 
   componentDidMount = () => {
@@ -99,9 +113,18 @@ class Category extends React.Component {
             className={classes.root}
           >
             <Hidden mdDown>
+              <CategoryGridList
+                data={breeds}
+                handleGridItemClick={this.handleGridItemClick}
+              />
+            </Hidden>
+            <Hidden only={['lg', 'xl']}>
+              <FloatCategory handleClick={this.handleToggleDrawer} />
               <CategoryDrawer
                 data={breeds}
                 handleGridItemClick={this.handleGridItemClick}
+                handleToggleDrawer={this.handleToggleDrawer}
+                isOpened={this.state.isDrawerOpened}
               />
             </Hidden>
 

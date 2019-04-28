@@ -7,19 +7,30 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const MainNavigation = () => {
+const styles = {
+  nav: {
+    marginTop: 21,
+    height: 56
+  },
+  toolbar: {
+    height: 56,
+    minHeight: 0
+  }
+};
+
+const MainNavigation = ({ classes }) => {
   return (
-    <AppBar position="static">
-      <Toolbar>
+    <AppBar position="static" className={classes.nav}>
+      <Toolbar className={classes.toolbar}>
         <IconButton color="inherit" aria-label="Menu">
-          <FontAwesomeIcon icon="hamburger" />
+          <FontAwesomeIcon icon="paw" />
         </IconButton>
         <Typography variant="h6" color="inherit">
-          News
+          Categories
         </Typography>
       </Toolbar>
     </AppBar>
   );
 };
 
-export default MainNavigation;
+export default withStyles(styles)(MainNavigation);
