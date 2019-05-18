@@ -32,6 +32,7 @@ const CategoryDrawer = ({
       open={isOpened}
       onClose={handleToggleDrawer}
       className={classes.drawer}
+      anchor="right"
     >
       <div
         tabIndex={0}
@@ -41,7 +42,7 @@ const CategoryDrawer = ({
       >
         <div className={classes.drawerHeader}>
           <IconButton>
-            <FontAwesomeIcon icon="chevron-left" />
+            <FontAwesomeIcon icon="chevron-right" />
           </IconButton>
         </div>
         <Divider />

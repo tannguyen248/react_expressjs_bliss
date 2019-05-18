@@ -26,7 +26,7 @@ const MainNavigation = ({ classes }) => {
           <FontAwesomeIcon icon="paw" />
         </IconButton>
         <Typography variant="h6" color="inherit">
-          Categories
+          Cat
         </Typography>
       </Toolbar>
     </AppBar>

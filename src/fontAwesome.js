@@ -7,7 +7,8 @@ import {
   faBookOpen,
   faPaw,
   faCat,
-  faChevronLeft
+  faPlus,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 
 export const addFont = () => {
@@ -18,7 +19,8 @@ export const addFont = () => {
     faBookOpen,
     faPaw,
     faCat,
-    faChevronLeft,
+    faChevronRight,
+    faPlus,
     faSkype
   );
 };

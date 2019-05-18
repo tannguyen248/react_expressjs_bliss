@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const styles = theme => ({
   fab: {
-    left: '50vw',
-    position: 'absolute',
-    top: 77,
+    right: '3vw',
+    position: 'fixed',
+    bottom: 50,
     transform: 'translate(-50%, -50%)',
     zIndex: 1
   },
@@ -19,13 +19,14 @@ const styles = theme => ({
 const FloatCategory = ({ classes, handleClick }) => {
   return (
     <Fab
-      size="medium"
+      size="large"
       aria-label="Delete"
       className={classes.fab}
       onClick={handleClick}
       color="secondary"
     >
       <Typography variant="body1" color="inherit">
+        <FontAwesomeIcon icon="plus" />
         <FontAwesomeIcon icon="cat" />
       </Typography>
     </Fab>
