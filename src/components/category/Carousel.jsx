@@ -1,20 +1,18 @@
 import React from 'react';
 import Slider from 'react-slick';
-import CardMedia from '@material-ui/core/CardMedia';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { withStyles } from '@material-ui/core';
 
 const settings = {
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 1500,
   dots: true,
   fade: true,
   infinitie: true,
   slidesToScroll: 1,
   slidesToShow: 1,
-  speed: 500,
-  swipeToSlide: true
+  speed: 500
 };
 
 const styles = {

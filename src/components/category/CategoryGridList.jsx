@@ -9,8 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import { compose } from 'recompose';
 
-const drawerWidth = 240;
-
 const styles = theme => ({
   root: {
     display: 'flex',

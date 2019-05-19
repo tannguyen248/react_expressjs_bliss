@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, Icon, Typography } from '@material-ui/core';
+import { withStyles, Typography } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
